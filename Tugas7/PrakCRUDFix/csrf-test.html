@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSRF Test (External Attack Forms)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 24px; }
+    h1 { color:#1e90ff }
+    .box { border:1px solid #ddd; padding:12px; margin:12px 0; border-radius:6px; }
+    button { padding:8px 12px; background:#e74c3c; color:white; border:none; border-radius:4px; cursor:pointer }
+  </style>
+</head>
+<body>
+  <h1>CSRF Protection Test (External Forms)</h1>
+
+  <p>This page simulates external attacker forms that submit POST requests <strong>without</strong> a CSRF token.</p>
+  <p>Open this page in your browser (file:// or serve from another host) and submit each form. A properly protected endpoint should reject the request (HTTP 403 / "CSRF token validation failed").</p>
+
+  <div class="box">
+    <h3>1) Bulk action (restore) without token</h3>
+    <form method="POST" action="http://localhost/PrakCRUD/bulk_action.php">
+      <!-- no csrf_token provided on purpose -->
+      <input type="hidden" name="action" value="restore">
+      <input type="hidden" name="ids[]" value="12">
+      <button type="submit">Submit bulk restore (no token)</button>
+    </form>
+  </div>
+
+  <div class="box">
+    <h3>2) Bulk action (delete) without token</h3>
+    <form method="POST" action="http://localhost/PrakCRUD/bulk_action.php">
+      <input type="hidden" name="action" value="delete">
+      <input type="hidden" name="ids[]" value="12">
+      <button type="submit">Submit bulk delete (no token)</button>
+    </form>
+  </div>
+
+  <div class="box">
+    <h3>3) Single restore (per-row) without token</h3>
+    <form method="POST" action="http://localhost/PrakCRUD/index.php?c=minimarket&a=restore">
+      <input type="hidden" name="id" value="12">
+      <button type="submit">Submit single restore (no token)</button>
+    </form>
+  </div>
+
+  <div class="box">
+    <h3>4) Single delete (per-row) without token</h3>
+    <form method="POST" action="http://localhost/PrakCRUD/index.php?c=minimarket&a=delete">
+      <input type="hidden" name="id" value="12">
+      <button type="submit">Submit single delete (no token)</button>
+    </form>
+  </div>
+
+  <hr>
+  <p>Expected result for each submission: the server responds with HTTP 403 or a message like "CSRF token validation failed" and the action is not performed.</p>
+  <p>Note: replace the ID values with IDs that correspond to recycle-bin items for real testing (e.g. id 12 in sample data).</p>
+</body>
+</html>

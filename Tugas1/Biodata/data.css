@@ -1,0 +1,141 @@
+.center {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: white;
+    padding: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.6);
+    animation: wiggle 0.5s ease-in-out;
+}
+
+.container:hover {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    animation: wiggle 0.5s ease-in-out;
+}
+
+.card-nama {
+    display: flex;
+    justify-content: center;
+    margin-right: 400px;
+}
+
+.nama {
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    margin-bottom: 25px;
+    width: 50%;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.nama:hover {
+    background-color: aqua;
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    animation: wiggle 0.5s ease-in-out;
+}
+
+.card-nim {
+    display: flex;
+    justify-content: center;
+    margin-left: 400px;
+}
+
+.nim {
+    display: flex;
+    justify-content: center;
+    background-color: lawngreen;
+    margin-bottom: 25px;
+    width: 50%;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.nim:hover {
+    background-color: lawngreen;
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    animation: wiggle 0.5s ease-in-out;
+}
+
+.card-prodi {
+    display: flex;
+    justify-content: center;
+    margin-right: 400px;
+}
+
+.prodi {
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    margin-bottom: 25px;
+    width: 50%;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.prodi:hover {
+    background-color: yellow;
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    animation: wiggle 0.5s ease-in-out;
+}
+
+.card-fakultas {
+    display: flex;
+    justify-content: center;
+    margin-left: 400px;
+}
+
+.fakultas {
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+    margin-bottom: 25px;
+    width: 50%;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.fakultas:hover {
+    background-color: blueviolet;
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    animation: wiggle 0.5s ease-in-out;
+}
+
+.card-usia {
+    display: flex;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.usia {
+    display: flex;
+    justify-content: center;
+    background-color: burlywood;
+    margin-bottom: 25px;
+    width: 50%;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.usia:hover {
+    background-color: burlywood;
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    animation: wiggle 0.5s ease-in-out;
+}
